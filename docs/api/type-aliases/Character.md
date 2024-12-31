@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7-alpha.1](../index.md) / Character
+[@elizaos/core v0.1.7-alpha.2](../index.md) / Character
 
 # Type Alias: Character
 
@@ -322,6 +322,10 @@ New structured ElevenLabs config
 
 > `optional` **model**: `string`
 
+### settings.modelConfig?
+
+> `optional` **modelConfig**: [`ModelConfiguration`](../interfaces/ModelConfiguration.md)
+
 ### settings.embeddingModel?
 
 > `optional` **embeddingModel**: `string`
@@ -440,6 +444,26 @@ Optional client-specific config
 
 > `optional` **shouldIgnoreDirectMessages**: `boolean`
 
+### clientConfig.gitbook?
+
+> `optional` **gitbook**: `object`
+
+### clientConfig.gitbook.keywords?
+
+> `optional` **keywords**: `object`
+
+### clientConfig.gitbook.keywords.projectTerms?
+
+> `optional` **projectTerms**: `string`[]
+
+### clientConfig.gitbook.keywords.generalQueries?
+
+> `optional` **generalQueries**: `string`[]
+
+### clientConfig.gitbook.documentTriggers?
+
+> `optional` **documentTriggers**: `string`[]
+
 ### style
 
 > **style**: `object`
@@ -496,4 +520,4 @@ Optional NFT prompt
 
 ## Defined in
 
-[packages/core/src/types.ts:629](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L629)
+[packages/core/src/types.ts:642](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L642)

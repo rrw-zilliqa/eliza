@@ -1,8 +1,4 @@
-# @elizaos/core v0.1.7-alpha.1
-
-## Namespaces
-
-- [EmbeddingProvider](namespaces/EmbeddingProvider/index.md)
+# @elizaos/core v0.1.7-alpha.2
 
 ## Enumerations
 
@@ -47,6 +43,7 @@
 - [Participant](interfaces/Participant.md)
 - [Room](interfaces/Room.md)
 - [IAgentConfig](interfaces/IAgentConfig.md)
+- [ModelConfiguration](interfaces/ModelConfiguration.md)
 - [IDatabaseAdapter](interfaces/IDatabaseAdapter.md)
 - [IDatabaseCacheAdapter](interfaces/IDatabaseCacheAdapter.md)
 - [IMemoryManager](interfaces/IMemoryManager.md)
@@ -65,7 +62,7 @@
 
 ## Type Aliases
 
-- [EmbeddingProvider](type-aliases/EmbeddingProvider.md)
+- [EmbeddingProviderType](type-aliases/EmbeddingProviderType.md)
 - [EmbeddingConfig](type-aliases/EmbeddingConfig.md)
 - [EnvConfig](type-aliases/EnvConfig.md)
 - [CharacterConfig](type-aliases/CharacterConfig.md)

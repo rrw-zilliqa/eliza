@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7-alpha.1](../index.md) / generateText
+[@elizaos/core v0.1.7-alpha.2](../index.md) / generateText
 
 # Function: generateText()
 
@@ -24,6 +24,8 @@ The context of the message to be completed.
 
 A list of strings to stop the generateText at.
 
+• **opts.customSystemPrompt?**: `string`
+
 ## Returns
 
 `Promise`\<`string`\>
@@ -32,4 +34,4 @@ The completed message.
 
 ## Defined in
 
-[packages/core/src/generation.ts:53](https://github.com/elizaOS/eliza/blob/main/packages/core/src/generation.ts#L53)
+[packages/core/src/generation.ts:53](https://github.com/elizaos/eliza/blob/main/packages/core/src/generation.ts#L53)

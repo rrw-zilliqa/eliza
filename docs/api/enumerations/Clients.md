@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7-alpha.1](../index.md) / Clients
+[@elizaos/core v0.1.7-alpha.2](../index.md) / Clients
 
 # Enumeration: Clients
 
@@ -12,7 +12,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:612](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L612)
+[packages/core/src/types.ts:617](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L617)
 
 ***
 
@@ -22,7 +22,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:613](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L613)
+[packages/core/src/types.ts:618](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L618)
 
 ***
 
@@ -32,7 +32,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:614](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L614)
+[packages/core/src/types.ts:619](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L619)
 
 ***
 
@@ -42,7 +42,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:615](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L615)
+[packages/core/src/types.ts:620](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L620)
 
 ***
 
@@ -52,7 +52,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:616](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L616)
+[packages/core/src/types.ts:621](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L621)
 
 ***
 
@@ -62,7 +62,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:617](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L617)
+[packages/core/src/types.ts:622](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L622)
 
 ***
 
@@ -72,7 +72,7 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:618](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L618)
+[packages/core/src/types.ts:623](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L623)
 
 ***
 
@@ -82,4 +82,4 @@ Available client platforms
 
 #### Defined in
 
-[packages/core/src/types.ts:619](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L619)
+[packages/core/src/types.ts:624](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L624)

@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7-alpha.1](../index.md) / IMemoryManager
+[@elizaos/core v0.1.7-alpha.2](../index.md) / IMemoryManager
 
 # Interface: IMemoryManager
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:967](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L967)
+[packages/core/src/types.ts:988](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L988)
 
 ***
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:968](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L968)
+[packages/core/src/types.ts:989](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L989)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:969](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L969)
+[packages/core/src/types.ts:990](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L990)
 
 ## Methods
 
@@ -48,7 +48,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:971](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L971)
+[packages/core/src/types.ts:992](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L992)
 
 ***
 
@@ -76,7 +76,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:973](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L973)
+[packages/core/src/types.ts:994](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L994)
 
 ***
 
@@ -94,7 +94,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:981](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L981)
+[packages/core/src/types.ts:1002](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1002)
 
 ***
 
@@ -112,7 +112,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:985](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L985)
+[packages/core/src/types.ts:1006](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1006)
 
 ***
 
@@ -132,7 +132,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:986](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L986)
+[packages/core/src/types.ts:1007](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1007)
 
 ***
 
@@ -160,7 +160,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:987](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L987)
+[packages/core/src/types.ts:1008](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1008)
 
 ***
 
@@ -180,7 +180,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:997](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L997)
+[packages/core/src/types.ts:1018](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1018)
 
 ***
 
@@ -198,7 +198,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:999](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L999)
+[packages/core/src/types.ts:1020](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1020)
 
 ***
 
@@ -216,7 +216,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1001](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1001)
+[packages/core/src/types.ts:1022](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1022)
 
 ***
 
@@ -236,4 +236,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1003](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1003)
+[packages/core/src/types.ts:1024](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1024)

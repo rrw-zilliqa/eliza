@@ -1,4 +1,4 @@
-[@elizaos/core v0.1.7-alpha.1](../index.md) / ActionResponse
+[@elizaos/core v0.1.7-alpha.2](../index.md) / ActionResponse
 
 # Interface: ActionResponse
 
@@ -10,7 +10,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1251](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1251)
+[packages/core/src/types.ts:1272](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1272)
 
 ***
 
@@ -20,7 +20,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1252](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1252)
+[packages/core/src/types.ts:1273](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1273)
 
 ***
 
@@ -30,7 +30,7 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1253](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1253)
+[packages/core/src/types.ts:1274](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1274)
 
 ***
 
@@ -40,4 +40,4 @@
 
 #### Defined in
 
-[packages/core/src/types.ts:1254](https://github.com/elizaOS/eliza/blob/main/packages/core/src/types.ts#L1254)
+[packages/core/src/types.ts:1275](https://github.com/elizaos/eliza/blob/main/packages/core/src/types.ts#L1275)
