@@ -505,8 +505,9 @@ export async function createAgent(
         throw new Error("Invalid TEE configuration");
     }
 
-    let goatPlugin: any | undefined;
-    if (getSecret(character, "EVM_PROVIDER_URL")) {
+  let goatPlugin: any | undefined;
+
+  if (getSecret(character, "EVM_PROVIDER_URL")) {
         goatPlugin = await createGoatPlugin((secret) =>
             getSecret(character, secret)
         );
@@ -688,6 +689,7 @@ async function startAgent(
             "",
             db
         ); // "" should be replaced with dir for file system caching. THOUGHTS: might probably make this into an env
+      elizaLogger.info("*** CREATEAGENT");
         const runtime: AgentRuntime = await createAgent(
             character,
             db,
@@ -747,6 +749,7 @@ const startAgents = async () => {
     let charactersArg = args.characters || args.character;
     let characters = [defaultCharacter];
 
+  elizaLogger.info("startAgents()");
     if (charactersArg) {
         characters = await loadCharacters(charactersArg);
     }

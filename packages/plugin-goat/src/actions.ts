@@ -14,7 +14,8 @@ import {
     ModelClass,
     type State,
     composeContext,
-    generateObject,
+  generateObject,
+  elizaLogger
 } from "@elizaos/core";
 
 type GetOnChainActionsParams<TWalletClient extends WalletClient> = {
@@ -38,15 +39,22 @@ export async function getOnChainActions<TWalletClient extends WalletClient>({
         wordForTool: "action",
     });
 
-    return tools
-        .map((action) => ({
-            ...action,
-            name: action.name.toUpperCase(),
-        }))
-        .map((tool) => createAction(tool));
+  for (var t of tools) {
+    elizaLogger.info(`*** Tool = ${JSON.stringify(t)}`);
+  }
+
+  return tools.map((tool) => createAction(tool, tool.name.toUpperCase()));
+
+  // Turns out that this strips method information.
+    // return tools
+    //     .map((action) => ({
+    //         ...action,
+    //         name: action.name.toUpperCase(),
+    //     }))
+    //     .map((tool) => createAction(tool));
 }
 
-function createAction(tool: Tool): Action {
+function createAction(tool: Tool, name: string): Action {
     return {
         name: tool.name,
         similes: [],
@@ -59,7 +67,7 @@ function createAction(tool: Tool): Action {
             options?: Record<string, unknown>,
             callback?: HandlerCallback
         ): Promise<boolean> => {
-            try {
+          try {
                 let currentState =
                     state ?? (await runtime.composeState(message));
                 currentState =
@@ -84,7 +92,7 @@ function createAction(tool: Tool): Action {
                     return false;
                 }
 
-                const result = await tool.method(parsedParameters.data);
+                const result = await tool.execute(parsedParameters.data);
                 const responseContext = composeResponseContext(
                     tool,
                     result,
