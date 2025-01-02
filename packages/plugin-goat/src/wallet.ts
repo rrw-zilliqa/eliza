@@ -1,10 +1,11 @@
 import { elizaLogger } from "@elizaos/core";
 import { WalletClient } from "@goat-sdk/core";
 import { viem } from "@goat-sdk/wallet-viem";
-import { createWalletClient, http } from "viem";
+import { createWalletClient, http, Chain } from "viem";
 import { Account } from "@zilliqa-js/account";
 import { privateKeyToAccount } from "viem/accounts";
 import { zilliqaWallet, zilliqaChainId } from "@goat-sdk/wallet-zilliqa";
+
 
 import { base } from "viem/chains";
 
@@ -12,6 +13,22 @@ import { base } from "viem/chains";
 // the EVM_PROVIDER_URL to the correct one for the chain
 export const chain = base;
 
+function getViemChain(provider, id, decimals) : Chain {
+  return {
+    "id": id | 0x8000,
+    "name": "zilliqa",
+    "nativeCurrency": {
+      decimals: decimals,
+      name: 'Zil',
+      symbol: 'ZIL'
+    },
+    "rpcUrls": {
+      default: {
+        https: [ provider ]
+      },
+    },
+  }
+}
 
 export async function getZilliqaWalletClient(
   getSetting: (key: string) => string | undefined
@@ -24,30 +41,13 @@ export async function getZilliqaWalletClient(
 
   const chainId = await zilliqaChainId(provider);
   const account = new Account(privateKey);
+  const viemChain = getViemChain(provider, chainId, 18);
   const viemWallet = createWalletClient({
         account: privateKeyToAccount(privateKey as `0x${string}`),
-        chain: chain,
+        chain: viemChain,
         transport: http(provider),
   });
   return zilliqaWallet(viemWallet, provider, account, chainId)
-}
-
-export function getWalletClient(
-    getSetting: (key: string) => string | undefined
-) {
-    const privateKey = getSetting("EVM_PRIVATE_KEY");
-    if (!privateKey) return null;
-
-    const provider = getSetting("EVM_PROVIDER_URL");
-    if (!provider) throw new Error("EVM_PROVIDER_URL not configured");
-
-    const wallet = createWalletClient({
-        account: privateKeyToAccount(privateKey as `0x${string}`),
-        chain: chain,
-        transport: http(provider),
-    });
-
-    return viem(wallet);
 }
 
 export function getWalletProviders(walletClient: WalletClient, zilliqa: Zilliqa) {

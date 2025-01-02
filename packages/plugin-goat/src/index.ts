@@ -4,7 +4,7 @@ import { erc20, USDC } from "@goat-sdk/plugin-erc20";
 import { sendETH } from "@goat-sdk/wallet-evm";
 import { coingecko } from "@goat-sdk/plugin-coingecko";
 import { zilliqa } from "@goat-sdk/plugin-zilliqa";
-import { getWalletClient, getZilliqaWalletClient, getWalletProviders } from "./wallet";
+import { getZilliqaWalletClient, getWalletProviders } from "./wallet";
 
 async function createGoatPlugin(
     getSetting: (key: string) => string | undefined
@@ -13,9 +13,9 @@ async function createGoatPlugin(
     apiKey: getSetting("COINGECKO_API_KEY")
   });
   const zqParams = { };
-  const walletClient = getWalletClient(getSetting);
   const zilliqaPlugin = zilliqa(zqParams);
   const zilliqaClient = await getZilliqaWalletClient(getSetting);
+  const walletClient = zilliqaClient.getViemClient();
   const ethActions = await getOnChainActions({
     wallet: walletClient,
     // Add plugins here based on what actions you want to use
