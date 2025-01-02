@@ -17,10 +17,11 @@ import {
   generateObject,
   elizaLogger
 } from "@elizaos/core";
+import { Zilliqa } from "@zilliqa-js/zilliqa";
 
 type GetOnChainActionsParams<TWalletClient extends WalletClient> = {
-    wallet: TWalletClient;
-    plugins: Plugin<TWalletClient>[];
+  wallet: TWalletClient;
+  plugins: Plugin<TWalletClient>[];
 };
 
 /**

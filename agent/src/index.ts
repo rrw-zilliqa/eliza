@@ -689,7 +689,6 @@ async function startAgent(
             "",
             db
         ); // "" should be replaced with dir for file system caching. THOUGHTS: might probably make this into an env
-      elizaLogger.info("*** CREATEAGENT");
         const runtime: AgentRuntime = await createAgent(
             character,
             db,
