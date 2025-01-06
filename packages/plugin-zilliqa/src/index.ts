@@ -6,7 +6,7 @@ async function createZilliqaPlugin(
     getSetting: (key: string) => string | undefined
 ): Promise<Plugin> {
     const zilliqaWalletClient = await getZilliqaWalletClient(getSetting);
-    const walletClient = zilliqaWalletClient.getViemClient();
+    const walletClient = zilliqaWalletClient.getEVM();
     const actions = await getOnChainActions(walletClient, zilliqaWalletClient);
 
     return {

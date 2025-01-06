@@ -3,7 +3,7 @@ import { viem } from "@goat-sdk/wallet-viem";
 import { createWalletClient, http } from "viem";
 import { privateKeyToAccount } from "viem/accounts";
 import { mode } from "viem/chains";
-import { zilliqaChainId, zilliqaWallet } from "@goat-sdk/wallet-zilliqa";
+import { zilliqaChainId, zilliqaJSViemWalletClient } from "@goat-sdk/wallet-zilliqa";
 import { Account } from "@zilliqa-js/zilliqa";
 
 // Add the chain you want to use, remember to update also
@@ -46,7 +46,7 @@ export async function getZilliqaWalletClient(
         transport: http(provider),
     });
 
-  return zilliqaWallet(viemWallet, provider, account, chainId)
+  return zilliqaJSViemWalletClient(viemWallet, provider, account, chainId)
 }
 
 export function getWalletProviders(walletClient: WalletClientBase, zilliqa: ZilliqaWalletClient) {
