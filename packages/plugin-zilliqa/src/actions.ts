@@ -3,6 +3,7 @@ import { MODE, USDC, erc20 } from "@goat-sdk/plugin-erc20";
 import { kim } from "@goat-sdk/plugin-kim";
 import { sendETH } from "@goat-sdk/wallet-evm";
 import { WalletClientBase } from "@goat-sdk/core";
+import { zilliqa } from "@goat-sdk/plugin-zilliqa";
 
 import {
     generateText,
@@ -11,10 +12,12 @@ import {
     type Memory,
     ModelClass,
     type State,
-    composeContext,
+  composeContext,
+  elizaLogger
 } from "@elizaos/core";
+import { Zilliqa } from "@zilliqa-js/zilliqa";
 
-export async function getOnChainActions(wallet: WalletClientBase) {
+export async function getOnChainActions(evmWallet: WalletClientBase, zilliqaWallet: WalletClientBase ) {
     const actionsWithoutHandler = [
         {
             name: "SWAP_TOKENS",
@@ -23,7 +26,7 @@ export async function getOnChainActions(wallet: WalletClientBase) {
             validate: async () => true,
             examples: [],
         },
-      {
+            {
           name: "GET_BALANCE",
           description: "Retrieve the balance of a zilliqa or evm account expressed as a hex or bech32 address",
           similes: [],
@@ -40,19 +43,28 @@ export async function getOnChainActions(wallet: WalletClientBase) {
             ]
           ]
         },
+
         // 1. Add your actions here
     ];
 
+  elizaLogger.info("*** Adding on chain tools");
     const tools = await getOnChainTools({
-        wallet: wallet,
+        wallet: evmWallet,
         // 2. Configure the plugins you need to perform those actions
         plugins: [sendETH(), erc20({ tokens: [USDC, MODE] }), kim()],
     });
 
+  const zilTools = await getOnChainTools({
+    wallet: zilliqaWallet,
+    plugins: [zilliqa()]
+  });
+
+  const allTools = { ... zilTools, ... tools };
+  elizaLogger.info(`allTools = ${JSON.stringify(allTools)}`);
     // 3. Let GOAT handle all the actions
     return actionsWithoutHandler.map((action) => ({
         ...action,
-        handler: getActionHandler(action.name, action.description, tools),
+        handler: getActionHandler(action.name, action.description, allTools),
     }));
 }
 
