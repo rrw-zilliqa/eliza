@@ -54,7 +54,7 @@ export async function getOnChainActions(evmWallet: WalletClientBase, zilliqaWall
         },
       {
           name: "CONVERT",
-          description: "Convert from a hex formatted address to a bech32 address which is encoded differently to a hex address, or back to hex",
+          description: "Convert address formats from bech32 to hex or from hex to bech32. The addresses to be converted may be either evm or zilliqa",
           similes: [],
           validate: async() => true,
           examples: [
