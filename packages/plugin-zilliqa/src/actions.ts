@@ -40,14 +40,68 @@ export async function getOnChainActions(evmWallet: WalletClientBase, zilliqaWall
                            action: "GET_BALANCE"
                          }
               }
+            ],
+            [ { user: "{{user1}}",
+                content: { text: "Tell me the balance of the account zil17r9jftrxhfeht0umn386j83q3k0240fwn7g70g" },
+              },
+              { user: "{{agentName}}",
+                content: { text: "The balance of account zil17r9jftrxhfeht0umn386j83q3k0240fwn7g70g is 18.05 zil",
+                           action: "GET_ZILLIQA_ADDRESS_BALANCE"
+                         }
+              }
             ]
           ]
         },
-
+      {
+          name: "CONVERT",
+          description: "Convert from a hex formatted address to a bech32 address which is encoded differently to a hex address, or back to hex",
+          similes: [],
+          validate: async() => true,
+          examples: [
+            [ { user: "{{user1}}",
+                content: { text: "Convert 0xf0cb24ac66ba7375bf9b9c4fa91e208d9eaabd2e to bech32" },
+              },
+              { user: "{{agentName}}",
+                content: { text: "The bech32 address for 0xf0cb24ac66ba7375bf9b9c4fa91e208d9eaabd2e is zil17r9jftrxhfeht0umn386j83q3k0240fwn7g70g" ,
+                           action: "CONVERT_TO_BECH32"
+                         }
+              }
+            ],
+            [ { user: "{{user1}}",
+                content: { text: "Convert zil17r9jftrxhfeht0umn386j83q3k0240fwn7g70g to hex" },
+              },
+              {
+                user: "{{agentName}}",
+                content: { text: "The hex address for zil17r9jftrxhfeht0umn386j83q3k0240fwn7g70g is 0xf0cb24ac66ba7375bf9b9c4fa91e208d9eaabd2e" ,
+                           action: "CONVERT_FROM_BECH32"
+                         }
+              }
+            ]
+          ]
+        },
+      {
+          name: "TRANSFER",
+          description: "Transfer funds from a Zilliqa or EVM address in either bech32 or hex format to a Zilliqa or EVM address in either bech32 or hex format",
+          similes: [],
+          validate: async() => true,
+          examples: [
+            [ { user: "{{user1}}",
+                content: { text: "Transfer 2 ZIL from the EVM address zil17r9jftrxhfeht0umn386j83q3k0240fwn7g70g to 0xf0cb24ac66ba7375bf9b9c4fa91e208d9eaabd2e",
+                           action: "TRANSFER_FROM_EVM_ADDRESS"
+                         }
+              }
+            ],
+                        [ { user: "{{user1}}",
+                            content: { text: "Transfer 2 ZIL from the Zilliqa address zil17r9jftrxhfeht0umn386j83q3k0240fwn7g70g to 0xf0cb24ac66ba7375bf9b9c4fa91e208d9eaabd2e",
+                           action: "TRANSFER_FROM_ZILLIQA_ADDRESS"
+                         }
+              }
+            ]
+          ]
+        },
         // 1. Add your actions here
     ];
 
-  elizaLogger.info("*** Adding on chain tools");
     const tools = await getOnChainTools({
         wallet: evmWallet,
         // 2. Configure the plugins you need to perform those actions
@@ -95,10 +149,10 @@ function getActionHandler(
                 context,
                 tools,
                 maxSteps: 10,
-                // Uncomment to see the log each tool call when debugging
-                // onStepFinish: (step) => {
-                //     console.log(step.toolResults);
-                // },
+              // Uncomment to see the log each tool call when debugging
+                 onStepFinish: (step) => {
+                     console.log(step.toolResults);
+                 },
                 modelClass: ModelClass.LARGE,
             });
 
