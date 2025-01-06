@@ -81,7 +81,7 @@ export async function getOnChainActions(evmWallet: WalletClientBase, zilliqaWall
         },
       {
           name: "TRANSFER",
-          description: "Transfer funds from a Zilliqa or EVM address in either bech32 or hex format to a Zilliqa or EVM address in either bech32 or hex format",
+          description: "Transfer funds from a Zilliqa or EVM address in either bech32 or hex format to a Zilliqa or EVM address in either bech32 or hex format, returning the transaction id in hex",
           similes: [],
           validate: async() => true,
           examples: [
