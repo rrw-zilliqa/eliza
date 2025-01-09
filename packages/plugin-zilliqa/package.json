@@ -11,7 +11,7 @@
         "@goat-sdk/plugin-coingecko": "0.1.4",
         "@goat-sdk/plugin-erc20": "0.2.2",
         "@goat-sdk/plugin-kim": "0.1.2",
-        "@goat-sdk/plugin-zilliqa": "link:/home/rrw/work/zilliqa/src/thirdparty/eliza/goat/typescript/packages/plugins/zilliqa",
+        "@goat-sdk/plugin-zilliqa": "0.1.0",
         "@goat-sdk/wallet-evm": "0.2.0",
         "@goat-sdk/wallet-viem": "0.2.0",
         "@zilliqa-js/account": "^3.5.0",
