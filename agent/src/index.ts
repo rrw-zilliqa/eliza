@@ -815,6 +815,7 @@ export async function createAgent(
                 ? coingeckoPlugin
                 : null,
             getSecret(character, "EVM_PROVIDER_URL") ? goatPlugin : null,
+            getSecret(character, "EVM_PROVIDER_URL") ? zilliqaPlugin: null,
             getSecret(character, "ABSTRACT_PRIVATE_KEY")
                 ? abstractPlugin
                 : null,
