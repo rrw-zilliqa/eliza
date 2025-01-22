@@ -14,7 +14,7 @@ This plugin integrates the GOAT Zilliqa plugin and wallet with Eliza.
 ## Installation
 
 ```bash
-pnpm install @elizaos/plugin-goat
+pnpm install @elizaos/plugin-zilliqa
 ```
 
 ## Configuration

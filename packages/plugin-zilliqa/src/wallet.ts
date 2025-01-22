@@ -13,7 +13,7 @@ import { Account } from "@zilliqa-js/zilliqa";
 // the ZILLIQA_PROVIDER_URL to the correct one for the chain
 export const chain = mode;
 
-function getViemChain(provider, id, decimals): Chain {
+function getViemChain(provider: string, id: number, decimals: number): Chain {
     return {
         id: id | 0x8000,
         name: "zilliqa",

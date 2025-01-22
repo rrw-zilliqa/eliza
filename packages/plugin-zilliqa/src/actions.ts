@@ -143,7 +143,6 @@ export async function getOnChainActions(
     });
 
     const allTools = { ...zilTools, ...tools };
-    elizaLogger.info(`allTools = ${JSON.stringify(allTools)}`);
     // 3. Let GOAT handle all the actions
     return actionsWithoutHandler.map((action) => ({
         ...action,
