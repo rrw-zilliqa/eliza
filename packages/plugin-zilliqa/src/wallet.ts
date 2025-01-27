@@ -6,6 +6,7 @@ import { mode } from "viem/chains";
 import {
     zilliqaChainId,
     zilliqaJSViemWalletClient,
+    ZilliqaWalletClient
 } from "@goat-sdk/wallet-zilliqa";
 import { Account } from "@zilliqa-js/zilliqa";
 
